@@ -63,7 +63,7 @@ main a:visited {
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -90,8 +90,30 @@ body {
   display: inline-block;
   font-size: 0.75rem;
   padding: 0.2rem 0.6rem;
-  border-radius:1rem;
+  border-radius: 1rem;
   border: solid 1px;
   margin-top: 0.5rem;
 }
 
+main img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: solid 1px rgb(237, 212, 178);
+  border-radius: 0.3rem;
+  text-decoration: none;
+}
