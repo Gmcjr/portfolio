@@ -152,3 +152,40 @@ main img {
   border-radius: 0.3rem;
   text-decoration: none;
 }
+
+.contact {
+  padding: 2rem 1.5rem;
+  border-top: solid 1px #2a2a3d;
+}
+
+.contact h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-links a {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-links a, 
+.contact-links a:visited {
+  color: #e8dcc8
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+}
+
+.contact-links a:active {
+  color: #ff8c00;
+}
