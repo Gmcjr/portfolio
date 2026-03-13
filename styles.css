@@ -8,9 +8,9 @@
 
 body {
   margin: 0;
-  font-family: Cochin;
-  color: rgb(237, 212, 178);
-  background-color: #473c5e;
+  font-family: 'DM Mono', monospace;
+  color: #e8dcc8;
+  background-color: #0d0d1a;
 }
 
 nav {
@@ -60,10 +60,6 @@ main a:visited {
   color: #b89fd4;
 }
 
-.description {
- text-align: center;
-}
-
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
@@ -71,12 +67,31 @@ h1 {
   color: #ffffff;
 }
 
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+}
 
-body {
-  margin: 0;
-  font-family: 'DM Mono', monospace;
+.filters button {
+  background-color: transparent;
+  border: solid 1px var(--accent);
   color: #e8dcc8;
-  background-color: #0d0d1a;
+  padding: 0.4rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.filters button:hover {
+  background-color: #1a0a2e;
+}
+
+.filters button.active {
+  background-color: var(--accent);
+  color: #ffffff;
 }
 
 .project-grid {
@@ -86,10 +101,20 @@ body {
   padding: 1rem;
 }
 
-.project-card{
+.project-card {
   border: solid 1px;
   border-radius: 0.5rem;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .tech {
