@@ -7,7 +7,7 @@ document.querySelectorAll('.filters button').forEach(button => {
         button.classList.add('active');
         document.querySelectorAll('.project-card').forEach(card => {
             if(filter === 'all' || filter === card.dataset.category){
-                card.style.display = 'block'
+                card.style.display = 'flex'
             } else {
                 card.style.display = 'none'
             };
