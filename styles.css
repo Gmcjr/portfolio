@@ -127,7 +127,7 @@ h1 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #e8dcc8;
-  transition: box-shadow 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out 0.05s, filter 0.3s ease-out 0.05s;
 }
 
 .filters button:hover {
@@ -143,7 +143,8 @@ h1 {
 
 .filters:has(button:hover) button {
   opacity: 0.4;
-  filter: blur(1.5px);
+  filter: blur(1px);
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out 0.05s, filter 0.3s ease-out 0.05s;
 }
 
 .filters:has(button:hover) button:hover {
@@ -165,8 +166,8 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 1), 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out 0.05s, filter 0.3s ease-out 0.05s;
 }
 
 .project-card:hover {
@@ -180,6 +181,7 @@ h1 {
   filter: blur(2px);
   transform: none;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out 0.05s, filter 0.3s ease-out 0.05s;
 }
 
 .project-grid:has(.project-card:hover) .project-card:hover {
