@@ -8,6 +8,8 @@
 
 body {
   margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
   font-family: 'Rambla', sans-serif;
   color: #e8dcc8;
   background: linear-gradient(135deg, #0a0a14 0%, #0d0d1a 50%, #110d1f 100%);
