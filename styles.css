@@ -110,30 +110,45 @@ h1 {
 
 .filters {
   display: flex;
-  gap: 0.75rem;
+  justify-content: center;
+  gap: 1.5rem;
   padding: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .filters button {
-  background-color: transparent;
-  border: solid 1px var(--accent);
-  color: #e8dcc8;
-  padding: 0.4rem 1rem;
-  border-radius: 0.3rem;
+  background-color: #080810;
+  border: none;
+  border-radius: 0;
+  padding: 1rem 2.5rem;
   cursor: pointer;
   font-family: 'DM Mono', monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e8dcc8;
+  transition: box-shadow 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
 }
 
 .filters button:hover {
-  background-color: #1a0a2e;
+  background-color: #080810;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(157, 78, 221, 0.15)
 }
 
 .filters button.active {
-  background-color: var(--accent);
-  color: #ffffff;
+  background-color: #080810;
+  color: var(--accent);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(157, 78, 221, 0.2);
+}
+
+.filters:has(button:hover) button {
+  opacity: 0.4;
+  filter: blur(1.5px);
+}
+
+.filters:has(button:hover) button:hover {
+  opacity: 1;
+  filter: blur(0);
 }
 
 .project-grid {
@@ -143,19 +158,35 @@ h1 {
 }
 
 .project-card {
-  background-color: #13131f;
-  border: solid 1px #2a2a3d;
-  border-radius: 0.5rem;
+  background-color: #080810;
+  border: none;
+  border-radius: 0;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 1), 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .project-card:hover {
-  border-color: var(--accent);
+  border-color: transparent;
   transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(157, 78, 221, 0.1);
+}
+
+.project-grid:has(.project-card:hover) .project-card {
+  opacity: 0.4;
+  filter: blur(2px);
+  transform: none;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+}
+
+.project-grid:has(.project-card:hover) .project-card:hover {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(157, 78, 221, 0.15);
 }
 
 .card-footer {
