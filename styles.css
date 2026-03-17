@@ -78,6 +78,21 @@ main a:visited {
   color: #b89fd4;
 }
 
+.avatar-wrap {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 80px 30px rgba(157, 78, 221, 0.25);
+  flex-shrink: 0;
+}
+
+main img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .content-wrapper {
   padding: 1.5rem;
 }
@@ -157,13 +172,6 @@ h1 {
   border-radius: 1rem;
   border: solid 1px;
   margin-top: 0.5rem;
-}
-
-main img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
 }
 
 .hero {
