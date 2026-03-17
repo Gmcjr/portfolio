@@ -179,6 +179,28 @@ h1 {
   align-items: center;
   gap: 2rem;
   padding: 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: 'Garrin Costa, Jr.';
+  position: absolute;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18rem;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.03;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
 }
 
 .cta {
