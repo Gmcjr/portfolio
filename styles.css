@@ -126,12 +126,19 @@ h1 {
 }
 
 .project-card {
-  border: solid 1px;
+  background-color: #13131f;
+  border: solid 1px #2a2a3d;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
 }
 
 .card-footer {
