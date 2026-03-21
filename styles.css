@@ -40,6 +40,11 @@ nav {
   background-color: #0a0a14;
 }
 
+nav, main {
+  position: relative;
+  z-index: 2;
+}
+
 nav a {
   display: inline-block;
   min-width: 9rem;
@@ -159,6 +164,8 @@ h1 {
 }
 
 .project-card {
+  position: relative;
+  z-index: 1;
   background-color: #080810;
   border: none;
   border-radius: 0;
@@ -249,7 +256,6 @@ h1 {
 
 .contact {
   padding: 2rem 1.5rem;
-  border-top: solid 1px #2a2a3d;
 }
 
 .contact h2 {
@@ -282,4 +288,14 @@ h1 {
 
 .contact-links a:active {
   color: #ff8c00;
+}
+
+#hex-bg {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
