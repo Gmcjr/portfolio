@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
   ctx.beginPath();
   points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
   ctx.closePath();
-  ctx.strokeStyle = `rgba(200, 100, 255, ${Math.min(brightness * 2, 2)})`;
+  ctx.strokeStyle = `rgba(200, 150, 255, ${Math.min(brightness * 1.5, 2)})`;
   ctx.lineWidth = 1;
-  ctx.shadowBlur = 10;
+  ctx.shadowBlur = 20;
   ctx.stroke();
 
   // Draw flowing bright segment
@@ -57,22 +57,22 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.beginPath();
     ctx.moveTo(sx, sy);
     ctx.lineTo(ex, ey);
-    ctx.strokeStyle = `rgba(157, 78, 221, ${Math.min(brightness * 3, 6)})`;
+    ctx.strokeStyle = `rgba(200, 100, 255, ${Math.min(brightness * 3, 9)})`;
     ctx.shadowColor = 'rgba(157, 78, 221, 0.9)';
-    ctx.shadowBlur = 15;
-    ctx.lineWidth = 2.5;
+    ctx.shadowBlur = 11;
+    ctx.lineWidth = 2;
     ctx.stroke();
-    ctx.shadowBlur = 0;
+    ctx.shadowBlur = 80;
   }
 }
 
   function drawHexGrid() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const size = 50;
+  const size = 55;
   const hexWidth = size * 1.9;
   const hexHeight = Math.sqrt(3) * size;
   const horizSpacing = hexWidth * 0.75;
-  const maxDist = 150;
+  const maxDist = 100;
 
   for (let col = -1; col < Math.ceil(canvas.width / horizSpacing) + 2; col++) {
     for (let row = -1; row < Math.ceil(canvas.height / hexHeight) + 2; row++) {
