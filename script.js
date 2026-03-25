@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
   ctx.beginPath();
   points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
   ctx.closePath();
-  ctx.strokeStyle = `rgba(200, 150, 255, ${Math.min(brightness * 1.5, 2)})`;
+  ctx.strokeStyle = `rgba(200, 150, 255, ${Math.min(brightness * 1.3, 2)})`;
   ctx.lineWidth = 1;
-  ctx.shadowBlur = 20;
+  ctx.shadowBlur = 22;
   ctx.stroke();
 
   // Draw flowing bright segment
-  if (brightness > 0.2) {
+  if (brightness > 0.6) {
     const phase = (time + x * 0.03 + y * 0.03) % (Math.PI * 1.5);
     const segmentLength = 4;
     const totalEdges = 6;
@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.moveTo(sx, sy);
     ctx.lineTo(ex, ey);
     ctx.strokeStyle = `rgba(200, 100, 255, ${Math.min(brightness * 3, 9)})`;
-    ctx.shadowColor = 'rgba(157, 78, 221, 0.9)';
-    ctx.shadowBlur = 11;
+    ctx.shadowColor = 'rgba(157, 78, 221, 1)';
+    ctx.shadowBlur = 50;
     ctx.lineWidth = 2;
     ctx.stroke();
     ctx.shadowBlur = 80;
