@@ -108,7 +108,7 @@ main img {
 }
 
 h1 {
-  font-family: 'Megrim', cursive;
+  font-family: 'BIZ UDMincho', serif;
   font-size: 4.5rem;
   font-weight: 300;
   text-align: left;
@@ -321,4 +321,9 @@ body:has(.cta:hover) #hex-bg,
 body:has(.contact-links a:hover) #hex-bg {
   opacity: 0.3;
   filter: blur(2px);
+}
+
+h2 {
+  font-family: 'BIZ UDMincho', serif;
+  color: #ffffff;
 }
