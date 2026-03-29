@@ -13,6 +13,7 @@ body {
   font-family: 'Rambla', sans-serif;
   color: #e8dcc8;
   background: linear-gradient(135deg, #0a0a14 0%, #0d0d1a 50%, #110d1f 100%);
+  animation: fadeIn 0.4s ease-in;
 }
 
 body::before {
@@ -349,4 +350,9 @@ h2 {
     font-size: 0.7rem;
     padding: 0.4rem 0.6rem;
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
